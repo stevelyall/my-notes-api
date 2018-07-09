@@ -1,0 +1,44 @@
+#%RAML 1.0
+title: My Notes API
+baseUri: http://mynotes.stevenlyall.ca/{version}
+version: v1
+
+/notes:
+  get:
+    description: Retrieve all stored notes.
+    responses:
+      200:
+        body:
+          application/json:
+          example: |
+          [
+            {
+              "noteId": "0c5376bb-3527-460f-b0fd-a89b339d3882",
+              "title": "Example Note Title",
+              "content": "This is an example of a note's content."
+            },
+            {
+              "noteId": "0df1498b-a88c-4508-a5ac-a03a0640168a",
+              "title": "Another Example Note Title",
+              "content": "This is another example of a note's content."
+            }
+          ]
+  post:
+    description: Create a note.
+    body:
+      application/json:
+      example: |
+      {
+        "title" : "New Note Title",
+        "content" : "This is a new note's content."
+      }
+    responses:
+      200:
+        body:
+          application/json:
+          example: |
+          {
+                "noteId": "95e4952a-70e9-46fc-975f-edf2064ea698",
+                "title" : "New Note Title",
+                "content" : "This is a new note's content."
+          }
