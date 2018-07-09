@@ -19,18 +19,24 @@ No authentication has been implemented.
 * Title has a max length of 255 characters
 * Note content has a max length of 1024 characters
 
+### Requirements:
+- Java 8
+- Maven
+
 ## Build
 
 Run `mvn clean install` to build.
 
+Alternatively, you can use the Maven wrapper i.e. `./mvnw clean install`
+
 ## Running unit tests
 
-`mvn surefire:test` to run the unit tests.
+`mvn surefire:test` or `./mvnw surefire:test` to run the unit tests.
 
 
 ## Development server
 
-Run `mvn spring-boot:run` for a local dev server.
+Run `mvn spring-boot:run` or `./mvnw spring-boot:run` for a local dev server.
 
 The API will be available at http://localhost:8080/.
 
